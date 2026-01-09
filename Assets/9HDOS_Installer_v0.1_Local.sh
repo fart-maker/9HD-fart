@@ -191,7 +191,7 @@ select-install-disk() {
  menu_entries() {
  while read -r line; do
     name=$(echo "$line" | awk '{print $1}')
-    size=$(echo "$line" | awk '{$2}' | sed 's/^ //')
+    size=$(echo "$line" | awk '{print $2}' | sed )
     menu_entries+=("$name" "$size")
 done <<< "$disks"
  }
